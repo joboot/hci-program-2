@@ -1,1 +1,26 @@
 /*Simple UI Project CSS*/
+.default-layout{
+    display: grid;
+    grid-template-rows: 50px auto 1.5em;
+    grid-template-columns: 
+    "header"
+    "main"
+    "footer"
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    min-height: 75vh;
+}
+
+footer {
+    grid-area: footer;
+    background: Black;
+    padding: .5em;
+    color: white;
+    
+}
