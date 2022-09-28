@@ -18,7 +18,7 @@ return (
             <Route path='/view_form' element={<ViewForm/>} />
         </Routes>
         </Router>
-        <div className="App">
+        <div>
             <Footer />
         </div>
     </div>

@@ -23,7 +23,7 @@ footer {
     left: 0;
     right: 0;
     padding: 8px;
-    text-align: center;
+    text-align: left;
     grid-area: footer;
     background: Black;
     padding: .5em;
