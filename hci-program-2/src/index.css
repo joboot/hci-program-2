@@ -14,13 +14,22 @@ header {
 
 main {
     grid-area: main;
-    min-height: 75vh;
+    min-height: 100vh;
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    text-align: center;
     grid-area: footer;
     background: Black;
     padding: .5em;
     color: white;
     
+}
+ul {
+    list-style-type: none;
 }
