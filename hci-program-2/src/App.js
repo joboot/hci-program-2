@@ -6,6 +6,8 @@ import Home from './pages/home';
 import InputForm from './pages/input_form';
 import ViewForm from './pages/view_form';
 import Footer from './components/Footer';
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Button from "react-bootstrap/Button";
 
 function App() {
 return (
