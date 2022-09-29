@@ -1,6 +1,7 @@
 import { React } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
+import { Dropdown } from 'react-bootstrap';
 
 const InputForm = () => {
 	let navigate = useNavigate();
@@ -27,7 +28,7 @@ const InputForm = () => {
 			<div>
 				<form>
 					<label>
-						Email:
+						Phone:
 						<input type="text" name="email" />
 					</label>
 				</form>
@@ -36,18 +37,30 @@ const InputForm = () => {
 			<div>
 				<form>
 					<label>
-						Phone:
+						Subject:
 						<input type="text" name="email" />
 					</label>
 				</form>
 			</div>
 
-			<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a className="dropdown-item">Technology Issue</a>
-				<a className="dropdown-item">Device Request</a>
+			<div class="btn-group">
+				<div class="dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Select a Category
+					</a>
+
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<a class="dropdown-item" href="#">Technology Issue</a>
+						<a class="dropdown-item" href="#">Device Request</a>
+					</div>
+				</div>
 			</div>
 
-			<Button type='button' color="primary" onClick={routeChange}>Submit</Button>
+			<div>
+				<button type="button" class="btn btn-success" onClick={routeChange}>
+					Submit
+				</button>
+			</div>
 
 		</div>
 	);
