@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-	
+	// The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.
 	let navigate = useNavigate();
 	const routeChange = () =>{
 		let path = '../input_form'
