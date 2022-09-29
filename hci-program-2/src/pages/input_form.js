@@ -39,9 +39,9 @@ return (
 			<a class="dropdown-item">Technology Issue</a>
 			<a class="dropdown-item">Device Request</a>
 		</div>
+
 		<button type="button" class="btn btn-success" href="">
 			Submit Ticket
-			
 		</button>
 
 	</div>
