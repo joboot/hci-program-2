@@ -1,13 +1,11 @@
 import React from 'react';
-import Navbar from './components/index';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import Home from './pages/home';
 import InputForm from './pages/input_form';
 import ViewForm from './pages/view_form';
 import Footer from './components/Footer';
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Button from "react-bootstrap/Button";
 
 function App() {
 return (
