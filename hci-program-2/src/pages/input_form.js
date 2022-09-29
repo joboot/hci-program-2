@@ -29,7 +29,7 @@ return (
 		<div>
 			<form>
 				<label>
-					Email:
+					Phone:
 					<input type="text" name="email" />
 				</label>
 			</form>
