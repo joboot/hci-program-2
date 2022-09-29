@@ -2,6 +2,7 @@ import React from "react";
 import {Table} from "react-bootstrap"
 
 const Home = () => {
+	// The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.
 return (
 	<div>
 	<h1>
