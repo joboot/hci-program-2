@@ -5,7 +5,7 @@ const Home = () => {
 return (
 	<div>
 	<h1>
-		Home page.
+		IT Ticket System
 	</h1>
 		<button type="button" class="btn btn-primary"><a href="input_form.js">Add Ticket</a></button>
 		<Table striped bordered hover>
