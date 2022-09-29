@@ -16,7 +16,7 @@ const InputForm = () => {
 				Submit a Ticket
 			</h1>
 
-			<div>
+			<div id="form_item">
 				<form>
 					<label>
 						Name:
@@ -25,7 +25,7 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div>
+			<div id="form_item">
 				<form>
 					<label>
 						Phone:
@@ -34,7 +34,7 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div>
+			<div id="form_item">
 				<form>
 					<label>
 						Subject:
@@ -43,7 +43,7 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div class="btn-group">
+			<div class="btn-group" id="form_item">
 				<div class="dropdown show">
 					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Select a Category
@@ -56,7 +56,7 @@ const InputForm = () => {
 				</div>
 			</div>
 
-			<div>
+			<div id="form_item">
 				<button type="button" class="btn btn-success" onClick={routeChange}>
 					Submit
 				</button>
