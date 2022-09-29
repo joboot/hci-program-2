@@ -6,7 +6,7 @@ return (
 	<h1>
 		Home page.
 	</h1>
-		<button type="button" class="btn btn-primary"><a href="input_form.js">Click to Go to Input Form</a></button>
+		<button type="button" class="btn btn-primary"><a href="input_form.js">Add Ticket</a></button>
 	</div>
 );
 };
