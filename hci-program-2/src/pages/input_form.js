@@ -1,13 +1,22 @@
 import { React } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
+import { tickets } from "../data/tickets"
 
 const InputForm = () => {
 	let navigate = useNavigate();
 	const routeChange = () =>{
+		let nextID = tickets.length
+		console.log(nextID)
+
 		let path = '../home'
 		navigate(path);
 	}
+	
+	const onSubmit = () => {
+		routeChange()
+		console.log("Submitted ticket");
+	  };
 
 	return (
 		<div>
@@ -47,7 +56,7 @@ const InputForm = () => {
 				<a className="dropdown-item">Device Request</a>
 			</div>
 
-			<Button type='button' color="primary" onClick={routeChange}>Submit</Button>
+			<Button type='button' color="primary" onClick={onSubmit}>Submit</Button>
 
 		</div>
 	);
