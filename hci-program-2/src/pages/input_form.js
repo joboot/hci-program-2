@@ -2,6 +2,7 @@ import { React } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Dropdown } from 'react-bootstrap';
+import { tickets } from '../data/tickets'
 
 const InputForm = () => {
 	let navigate = useNavigate();
