@@ -2,6 +2,8 @@ import React from "react";
 import { Table } from "react-bootstrap"
 import { Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
+import { tickets } from "../data/tickets"
+
 
 const Home = () => {
 	// The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.
@@ -21,6 +23,7 @@ const Home = () => {
 		</div>
 
 			<Table striped bordered hover>
+
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -31,15 +34,25 @@ const Home = () => {
 						<th>Date</th>
 					</tr>
 				</thead>
+
 				<tbody>
-					<tr>
-						<th>1</th>
-						<th>PC wont boot</th>
-						<th>Problem</th>
-						<th>Jordan Booth</th>
-						<th>3056644029</th>
-						<th>9/29/2022</th>
-					</tr>
+					{tickets.length ? (tickets.map((row) => (
+						<tr key={row.id}>
+						<td>{row.id}</td>
+						<td>{row.subject}</td>
+						<td>{row.type}</td>
+						<td>{row.name}</td>
+						<td>{row.phone}</td>
+						<td>{row.date}</td>
+						</tr>
+						))
+						) : (
+							<tr>
+								<td>No tickets yet</td>
+							</tr>
+						)
+					}
+						
 				</tbody>
 			</Table>
 		</div>

@@ -2,13 +2,22 @@ import { React } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Dropdown } from 'react-bootstrap';
+import { tickets } from '../data/tickets'
 
 const InputForm = () => {
 	let navigate = useNavigate();
 	const routeChange = () =>{
+		let nextID = tickets.length
+		console.log(nextID)
+
 		let path = '../home'
 		navigate(path);
 	}
+	
+	const onSubmit = () => {
+		routeChange()
+		console.log("Submitted ticket");
+	  };
 
 	return (
 		<div>
