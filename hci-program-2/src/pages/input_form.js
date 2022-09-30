@@ -63,15 +63,16 @@ const InputForm = () => {
 			</div>
 
 			<div class="btn-group d-flex justify-content-center" id="form_item">
-				<div class="dropdown show">
-					<Button class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Select a Category
-					</Button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
-						<a class="dropdown-item" href="#">Technology Issue</a>
-						<a class="dropdown-item" href="#">Device Request</a>
-					</div>
-				</div>
+				<Dropdown>
+					<Dropdown.Toggle variant="success" id="dropdown-basic">
+						Dropdown Button
+					</Dropdown.Toggle>
+
+					<Dropdown.Menu>
+						<Dropdown.Item href="#/action-1">Technology Issue</Dropdown.Item>
+						<Dropdown.Item href="#/action-2">Device Request</Dropdown.Item>
+					</Dropdown.Menu>
+				</Dropdown>
 			</div>
 
 			<div id="form_item" class="d-flex justify-content-center">
