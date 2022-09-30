@@ -48,7 +48,7 @@ const InputForm = () => {
 				<form>
 					<label>
 						Subject:
-						<input type="text" name="email" />
+						<input type="text" name="subject" />
 					</label>
 				</form>
 			</div>
@@ -56,8 +56,8 @@ const InputForm = () => {
 			<div id="form_item" class="d-flex justify-content-center">
 				<form>
 					<label>
-						Subject:
-						<input type="text" name="email" />
+						Description:
+						<input type="text" name="desc" />
 					</label>
 				</form>
 			</div>
