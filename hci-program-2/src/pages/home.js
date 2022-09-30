@@ -19,7 +19,7 @@ const Home = () => {
 		</h1>
 
 		<div class="d-flex justify-content-center">
-			<button type="button" class="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</button>
+			<Button type="button" class="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</Button>
 		</div>
 
 			<Table striped bordered hover>

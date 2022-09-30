@@ -26,7 +26,7 @@ const InputForm = () => {
 				Submit a Ticket
 			</h1>
 
-			<div id="form_item">
+			<div id="form_item" class="d-flex justify-content-center">
 				<form>
 					<label>
 						Name:
@@ -35,7 +35,7 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div id="form_item">
+			<div id="form_item" class="d-flex justify-content-center">
 				<form>
 					<label>
 						Phone:
@@ -44,7 +44,7 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div id="form_item">
+			<div id="form_item" class="d-flex justify-content-center">
 				<form>
 					<label>
 						Subject:
@@ -53,13 +53,13 @@ const InputForm = () => {
 				</form>
 			</div>
 
-			<div class="btn-group" id="form_item">
+			<div class="btn-group d-flex justify-content-center" id="form_item">
 				<div class="dropdown show">
-					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Select a Category
 					</a>
 
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
 						<a class="dropdown-item" href="#">Technology Issue</a>
 						<a class="dropdown-item" href="#">Device Request</a>
 					</div>
@@ -67,9 +67,9 @@ const InputForm = () => {
 			</div>
 
 			<div id="form_item">
-				<button type="button" class="btn btn-success" onClick={routeChange}>
+				<Button type="button" class="btn btn-success d-flex justify-content-center" onClick={routeChange}>
 					Submit
-				</button>
+				</Button>
 			</div>
 
 		</div>
