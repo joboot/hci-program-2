@@ -18,7 +18,7 @@ const Home = () => {
 			IT Ticket System
 		</h1>
 
-		<div class="d-flex justify-content-center">
+		<div class="d-flex justify-content-center submit">
 			<Button type="button" class="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</Button>
 		</div>
 
