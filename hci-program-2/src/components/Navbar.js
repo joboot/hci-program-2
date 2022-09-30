@@ -11,10 +11,10 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink to="/input_form">
-            Input form
+            Submit a Ticket
           </NavLink>
           <NavLink to="/view_form">
-            View form
+            View Ticket
           </NavLink>
         </NavMenu>
       </Nav>
