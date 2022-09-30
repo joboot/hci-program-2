@@ -46,3 +46,13 @@ a:hover {
     background: orange;
     text-decoration: underline;
 }
+
+#form_item {
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-bottom: 25px;
+}
+
+h1 {
+    text-align: center;
+}
