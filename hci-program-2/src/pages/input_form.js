@@ -61,7 +61,7 @@ const InputForm = () => {
 					</label>
 				</form>
 			</div>
-
+	
 			<div class="btn-group d-flex justify-content-center" id="form_item">
 				<div class="dropdown show">
 					<Button class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,6 +82,7 @@ const InputForm = () => {
 
 		</div>
 	);
+	// This is the code for the input form where you can type in your name, phone, subject, and description on the webpage. Also includes buttons via bootstrap that a user can click on.
 };
 
 export default InputForm;
