@@ -13,20 +13,34 @@ const ViewForm = () => {
 return (
 	<div>
 		<h1>Ticket Form</h1>
+		<div class="d-flex justify-content-center">
+		 <Button variant="primary" onClick={routeChange}>Return Home</Button>
+		 </div>	
+		
 	<Container>
+		<Col>
 			<Row>
-				<Col>
-				 <div className="subject">Subject: (subject)</div>
-				 <div className="type">Type: (Type of Ticket)</div>
-				 <div className='name'>Name: (Name)</div>
-				 <div className='phone'>Phone: (111-111-1111)</div>
-				 <div className="date">Date Added: (Date)</div>
-				</Col>
-				<Col>
-				 <Button variant="primary" onClick={routeChange}>Close Ticket</Button>
-				</Col>
+				<b><div classname="id">Ticket ID Number: </div></b>
+				<div>{ticket.id}</div>
+
+				<b><div id="form_item" className="subject">Subject: </div></b>
+				<div>{ticket.subject}</div>
+
+				<b><div id="form_item" className="type">Type: </div></b>
+				<div>{ticket.type}</div>
+
+				<b><div id="form_item" className='name'>Name: </div></b>
+				<div>{ticket.name}</div>
+
+				<b><div id="form_item" className='phone'>Phone: </div></b>
+				<div>{ticket.phone}</div>
+
+				<b><div id="form_item" className="date">Date Added: </div></b>
+				<div>{ticket.date}</div>
 			</Row>
-		</Container>
+		</Col>
+	</Container>	
+		
 	</div>
 );
 };
