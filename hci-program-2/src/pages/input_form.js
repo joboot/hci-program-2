@@ -2,7 +2,8 @@ import  React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Form } from 'react-bootstrap';
-import { tickets } from '../data/tickets'
+//import { tickets } from '../data/tickets'
+import tickets from '../data/tickets.json'
 
 export default class InputForm extends Component {
 	state = {

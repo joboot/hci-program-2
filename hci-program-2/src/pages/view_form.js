@@ -1,9 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { tickets } from "../data/tickets"
+//import { tickets } from "../data/tickets"
+import tickets from '../data/tickets.json'
 
 const ticket = tickets[0]
+
 const ViewForm = () => {
 	let navigate = useNavigate();
 	const routeChange = () => {
@@ -29,6 +31,9 @@ return (
 				<b><div id="form_item" className="type">Type: </div></b>
 				<div>{ticket.type}</div>
 
+				
+			</Row>
+			<Row>
 				<b><div id="form_item" className='name'>Name: </div></b>
 				<div>{ticket.name}</div>
 
