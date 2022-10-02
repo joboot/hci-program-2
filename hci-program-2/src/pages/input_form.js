@@ -148,5 +148,5 @@ export default class InputForm extends Component {
 		</div>
 		);
 	}
-	// This is the code for the input form where you can type in your name, phone, subject, and description on the webpage. Also includes buttons via bootstrap that a user can click on.
+	// This is the code that is used to submit the users information by clicking a button provided by bootstrap
 };
