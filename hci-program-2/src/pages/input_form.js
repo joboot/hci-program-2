@@ -2,7 +2,9 @@ import { React } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Dropdown } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { tickets } from '../data/tickets'
+import { type } from "@testing-library/user-event/dist/type";
 
 const InputForm = () => {
 	let navigate = useNavigate();
@@ -18,6 +20,7 @@ const InputForm = () => {
 		//put save state here
 		routeChange()
 		console.log("Submitted ticket");
+		JSON.stringify({ id: "nextID", subject: "subject", type: "type", name: "name", phone: "phone", date: "date" })
 	};
 
 	return (
@@ -27,49 +30,49 @@ const InputForm = () => {
 			</h1>
 
 			<div id="form_item" class="d-flex justify-content-center">
-				<form>
+				<Form>
 					<label>
-						Name:
+						Name:  
 						<input type="text" name="name" />
 					</label>
-				</form>
+				</Form>
 			</div>
 
 			<div id="form_item" class="d-flex justify-content-center">
-				<form>
+				<Form>
 					<label>
-						Phone:
+						Phone:  
 						<input type="text" name="email" />
 					</label>
-				</form>
+				</Form>
 			</div>
 
 			<div id="form_item" class="d-flex justify-content-center">
-				<form>
+				<Form>
 					<label>
-						Subject:
+						Subject:  
 						<input type="text" name="subject" />
 					</label>
-				</form>
+				</Form>
 			</div>
 
 			<div id="form_item" class="d-flex justify-content-center">
-				<form>
+				<Form>
 					<label>
-						Description:
+						Description:  
 						<input type="text" name="desc" />
 					</label>
-				</form>
+				</Form>
 			</div>
 	
 			<div class="btn-group d-flex justify-content-center" id="form_item">
 				<Dropdown>
 					<Dropdown.Toggle variant="success" id="dropdown-basic">
-						Dropdown Button
+						Select a Category
 					</Dropdown.Toggle>
 
 					<Dropdown.Menu>
-						<Dropdown.Item href="#/action-1">Technology Issue</Dropdown.Item>
+						<Dropdown.Item href="#/action-1">Tech Issue</Dropdown.Item>
 						<Dropdown.Item href="#/action-2">Device Request</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>
