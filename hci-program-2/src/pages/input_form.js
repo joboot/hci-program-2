@@ -43,7 +43,7 @@ export default class InputForm extends Component {
 				<Form.Group>
 					<Form.Label>
 					{/* <Form.Label id="form_item" class="d-flex justify-content-center" > */}
-						Name
+						Name:
 					</Form.Label>
 					<Form.Control id="form_item" className="d-flex justify-content-center" 
 						name="name"
@@ -59,7 +59,7 @@ export default class InputForm extends Component {
 
 				<Form.Group>
 					<Form.Label>
-						Phone Number
+						Phone Number:
 					</Form.Label>
 					<Form.Control
 						name="phone"
@@ -75,7 +75,7 @@ export default class InputForm extends Component {
 
 				<Form.Group>
 					<Form.Label>
-						Type
+						Type:
 					</Form.Label>
 					<Form.Select
 						value={this.state.type}
@@ -94,7 +94,7 @@ export default class InputForm extends Component {
 
 				<Form.Group>
 					<Form.Label>
-						Subject
+						Subject:
 					</Form.Label>
 					<Form.Control
 						name="subject"
@@ -110,7 +110,7 @@ export default class InputForm extends Component {
 
 				<Form.Group>
 					<Form.Label>
-						Description
+						Description:
 					</Form.Label>
 					<Form.Control
 						name="description"
@@ -125,6 +125,7 @@ export default class InputForm extends Component {
 				<br />
 
 			</div>
+			/* This code is used to display the form group on the input form page where the user can type in their information. there is placeholder text that the user can click on to type in their information*/
 		)
 	}
 
