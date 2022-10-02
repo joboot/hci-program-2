@@ -7,7 +7,6 @@ import tickets from '../data/tickets.json'
 
 
 const Home = () => {
-	// The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.
 	let navigate = useNavigate();
 	const routeChange = () =>{
 		let path = '../input_form'
@@ -22,6 +21,7 @@ const Home = () => {
 		<div class="d-flex justify-content-center submit">
 			<Button type="button" class="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</Button>
 		</div>
+		{/*The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.*/}
 
 			<Table striped bordered hover>
 
@@ -59,5 +59,5 @@ const Home = () => {
 		</div>
 	);
 };
-
+// This code, starting with the <Table> tag is used to display the information regarding submitted tickets.
 export default Home;
