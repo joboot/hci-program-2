@@ -40,7 +40,7 @@ return (
 			</Row>
 		</Col>
 	</Container>	
-		
+		{/*This code is used to display the information provided in a ticket that has been submitted by a user*/}
 	</div>
 );
 };
