@@ -2,7 +2,7 @@ import '../index.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='footer'>
             <ul className='ul'>
                 <li>Contact Info:</li>
                 <li>(402) 804-2507</li>

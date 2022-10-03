@@ -7,16 +7,24 @@ const Home = () => {
 	const navigate = useNavigate();
 	
 	return (
-		<div style={{ display: 'block',
-		width: 1000, padding: 30, margin: "auto" }}>
+		<div style={{ 
+			display: 'block',
+			width: 1000, 
+			padding: 30, 
+			margin: "auto" 
+			}}>
 			<h1>
 				IT Ticket System
 			</h1>
+
+			<br />
 
 			<div className="d-flex justify-content-center submit">
 				<Button type="button" className="btn btn-primary btn-lg btn-block" onClick={() => {navigate('../input_form')}}>Submit a Ticket</Button>
 			</div>
 			{/*The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.*/}
+
+			<br />
 
 			<Container fluid>
 				<Row>

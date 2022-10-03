@@ -9,8 +9,12 @@ const ViewForm = () => {
 	const navigate = useNavigate();
 			 
 	return (
-		<div style={{ display: 'block',
-		width: 1000, padding: 30, margin: "auto" }}>
+		<div style={{ 
+			display: 'block',
+			width: 1000, 
+			padding: 30, 
+			margin: "auto" 
+			}}>
 			<h1>Ticket Form</h1>
 			<div className="d-flex justify-content-center">
 			<Button variant="primary" onClick={() => {navigate('../home')}}>Return Home</Button>

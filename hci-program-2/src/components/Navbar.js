@@ -2,6 +2,7 @@ import React from "react";
 import { Nav, NavLink, NavMenu } 
     from "./NavbarElements";
   
+// Navigation bar imports 
 const Navbar = () => {
   return (
     <>
