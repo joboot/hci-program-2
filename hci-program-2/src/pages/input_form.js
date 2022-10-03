@@ -1,40 +1,26 @@
-import  React, { Component } from "react";
+import  React, { useState } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Form } from 'react-bootstrap';
 import tickets from '../data/tickets.json'
 
-export default class InputForm extends Component {
-	state = {
-		name: "",
-		phone:"",
-		type:"",
-		subject:"",
-		description:""
-	};
-
-	routeChange = () =>{
-		const navigate = useNavigate();
-		
-		let path = '../home'
-		navigate(path);
-	}
-
-	// handleOnChange = e =>{
-	// 	const {name, value} = e.target
-	// }
+const InputForm = () => {
+	const navigate = useNavigate();
+	const [name, setName] = useState();
+	const [phone, setPhone] = useState();
+	const [type, setType] = useState();
+	const [subject, setSubject] = useState();
+	const [description, setDescription] = useState();
 	
-	onSubmit = () => {
-		//put save state here
+	const onSubmit = () => {
 		let nextID = tickets.length + 1;
+		let jsonTicket = JSON.stringify({ "id": nextID, "subject": subject, "type": type, "name": name, "phone": phone, "date": new Date().toLocaleString(), "description": description });
 		console.log("Submitted ticket");
-		let jsonTicket = JSON.stringify({ "id": nextID, "subject": this.state.subject, "type": this.state.type, "name": this.state.name, "phone": this.state.phone, "date": new Date().toLocaleString(), "description": this.state.description });
 		console.log(jsonTicket)
-		//this.routeChange();
-		
+		navigate("../home")
 	};
 
-	createFormGroups = () => {
+	const createFormGroups = () => {
 		return(
 			<div>
 				<Form.Group>
@@ -44,8 +30,8 @@ export default class InputForm extends Component {
 					<Form.Control
 						name="name"
 						placeholder="Name"
-						value={this.state.name}
-						onChange={e => this.setState({ name: e.target.value })}
+						value={name || ''}
+						onChange= {e => setName(e.target.value)}
 						type="text"
 						required
 					/>
@@ -60,8 +46,8 @@ export default class InputForm extends Component {
 					<Form.Control
 						name="phone"
 						placeholder="Phone Number"
-						value={this.state.phone}
-						onChange={e => this.setState({ phone: e.target.value })}
+						value={phone || ''}
+						onChange={e => setPhone(e.target.value)}
 						type="text"
 						required
 					/>
@@ -74,14 +60,13 @@ export default class InputForm extends Component {
 						Type:
 					</Form.Label>
 					<Form.Select
-						value={this.state.type}
-						onChange={e => this.setState({ type: e.target.value })}>
-
+						value={type || ''}
+						onChange={e => setType(e.target.value)}>
 						<option value="" isinvalid="true">
 							Select Type
 						</option>
-						<option value="incident">Incident</option>
-						<option value="request">Request</option>
+						<option value="Incident">Incident</option>
+						<option value="Request">Request</option>
 
 					</Form.Select>
 				</Form.Group>
@@ -95,8 +80,8 @@ export default class InputForm extends Component {
 					<Form.Control
 						name="subject"
 						placeholder="Subject"
-						value={this.state.subject}
-						onChange={e => this.setState({ subject: e.target.value })}
+						value={subject || ''}
+						onChange={e => setSubject(e.target.value)}
 						type="text"
 						required
 					/>
@@ -111,8 +96,8 @@ export default class InputForm extends Component {
 					<Form.Control
 						name="description"
 						placeholder="Description"
-						value={this.state.description}
-						onChange={e => this.setState({ description: e.target.value })}
+						value={description || ''}
+						onChange={e => setDescription(e.target.value)}
 						type="text"
 						required
 					/>
@@ -125,24 +110,27 @@ export default class InputForm extends Component {
 		)
 	}
 
-	render() {
-		return (
-		<div>
-			<h1>
-				Submit a Ticket
-			</h1>
+	return (
+	<div>
+		<h1>
+			Submit a Ticket
+		</h1>
+		
+		<Form autoComplete="off" >
+
+			{createFormGroups()};
 			
-			<Form autoComplete="off" onSubmit={this.onSubmit}>
-
-				{this.createFormGroups()};
-
-				<Button type="button" className="btn btn-primary" onClick={this.onSubmit}>
-					Submit
-				</Button>
-			</Form>
-
+		</Form>
+		<div>
+			<Button type="button" className="btn btn-primary" onClick={() => {onSubmit()}}>
+				Submit
+			</Button>
 		</div>
-		);
-	}
+		
+
+	</div>
+	);
 	// This is the code that is used to submit the users information by clicking a button provided by bootstrap
 };
+
+export default InputForm;
