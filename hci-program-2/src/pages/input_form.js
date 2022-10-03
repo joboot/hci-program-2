@@ -2,7 +2,6 @@ import  React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Form } from 'react-bootstrap';
-//import { tickets } from '../data/tickets'
 import tickets from '../data/tickets.json'
 
 export default class InputForm extends Component {
@@ -27,14 +26,10 @@ export default class InputForm extends Component {
 	
 	onSubmit = () => {
 		//put save state here
-		console.log(new Date().toLocaleString());
-		console.log(this.state);
 		let nextID = tickets.length + 1;
-		console.log(nextID);
 		console.log("Submitted ticket");
 		let jsonTicket = JSON.stringify({ "id": nextID, "subject": this.state.subject, "type": this.state.type, "name": this.state.name, "phone": this.state.phone, "date": new Date().toLocaleString(), "description": this.state.description });
-		tickets.push(jsonTicket);
-		console.log(tickets)
+		console.log(jsonTicket)
 		//this.routeChange();
 		
 	};
