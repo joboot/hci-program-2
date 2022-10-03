@@ -12,6 +12,7 @@ const InputForm = () => {
 	const [subject, setSubject] = useState();
 	const [description, setDescription] = useState();
 	
+	//function that is called when submit button is pressed
 	const onSubmit = () => {
 		let nextID = tickets.length + 1;
 		let jsonTicket = JSON.stringify({ "id": nextID, "subject": subject, "type": type, "name": name, "phone": phone, "date": new Date().toLocaleString(), "description": description });
@@ -20,6 +21,8 @@ const InputForm = () => {
 		navigate("../home")
 	};
 
+	/* This code is used to display the form group on the input form page where the user can type in their information. 
+	There is placeholder text that the user can click on to type in their information*/
 	const createFormGroups = () => {
 		return(
 			<div>
@@ -109,6 +112,7 @@ const InputForm = () => {
 		)
 	}
 
+	// Returns the form and a Bootstrap button that submits data in the form boxes
 	return (
 	<div>
 		<h1>
