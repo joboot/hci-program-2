@@ -106,7 +106,6 @@ const InputForm = () => {
 				<br />
 
 			</div>
-			/* This code is used to display the form group on the input form page where the user can type in their information. there is placeholder text that the user can click on to type in their information*/
 		)
 	}
 
