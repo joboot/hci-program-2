@@ -18,8 +18,8 @@ const Home = () => {
 			IT Ticket System
 		</h1>
 
-		<div class="d-flex justify-content-center submit">
-			<Button type="button" class="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</Button>
+		<div className="d-flex justify-content-center submit">
+			<Button type="button" className="btn btn-primary btn-lg btn-block" onClick={routeChange}>Submit a Ticket</Button>
 		</div>
 		{/*The <Button> tag is used to add a button to the home page. When Clicked, it takes you to the Input Form Page.*/}
 

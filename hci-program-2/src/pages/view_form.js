@@ -14,14 +14,14 @@ const ViewForm = () => {
 return (
 	<div>
 		<h1>Ticket Form</h1>
-		<div class="d-flex justify-content-center">
+		<div className="d-flex justify-content-center">
 		 <Button variant="primary" onClick={routeChange}>Return Home</Button>
 		 </div>	
 		
 	<Container>
 		<Col>
 			<Row>
-				<b><div classname="id">Ticket ID Number: </div></b>
+				<b><div className="id">Ticket ID Number: </div></b>
 				<div>{ticket.id}</div>
 
 				<b><div id="form_item" className="subject">Subject: </div></b>
@@ -38,6 +38,9 @@ return (
 
 				<b><div id="form_item" className="date">Date Added: </div></b>
 				<div>{ticket.date}</div>
+
+				<b><div id="form_item" className="date">Description: </div></b>
+				<div>{ticket.description}</div>
 
 			</Row>
 
