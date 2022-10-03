@@ -27,11 +27,12 @@ export default class InputForm extends Component {
 	
 	onSubmit = () => {
 		//put save state here
+		console.log(new Date().toLocaleString());
 		console.log(this.state);
 		let nextID = tickets.length + 1;
 		console.log(nextID);
 		console.log("Submitted ticket");
-		let jsonTicket = JSON.stringify({ "id": nextID, "subject": this.state.subject, "type": this.state.type, "name": this.state.name, "phone": this.state.phone, "date": this.state.date });
+		let jsonTicket = JSON.stringify({ "id": nextID, "subject": this.state.subject, "type": this.state.type, "name": this.state.name, "phone": this.state.phone, "date": new Date().toLocaleString(), "description": this.state.description });
 		tickets.push(jsonTicket);
 		console.log(tickets)
 		//this.routeChange();
@@ -43,10 +44,9 @@ export default class InputForm extends Component {
 			<div>
 				<Form.Group>
 					<Form.Label>
-					{/* <Form.Label id="form_item" class="d-flex justify-content-center" > */}
 						Name:
 					</Form.Label>
-					<Form.Control id="form_item" className="d-flex justify-content-center" 
+					<Form.Control
 						name="name"
 						placeholder="Name"
 						value={this.state.name}
