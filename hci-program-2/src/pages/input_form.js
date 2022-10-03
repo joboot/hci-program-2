@@ -115,7 +115,12 @@ const InputForm = () => {
 
 	// Returns the form and a Bootstrap button that submits data in the form boxes
 	return (
-	<div>
+	<div style={{ 
+			display: 'block',
+			width: 1000, 
+			padding: 30, 
+			margin: "auto" 
+			}}>
 		<h1>
 			Submit a Ticket
 		</h1>

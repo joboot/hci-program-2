@@ -5,23 +5,18 @@ import tickets from '../data/tickets.json'
 
 const ticket = tickets[0]
 
-// function UseRouteChange() {
-// 	let navigate = useNavigate();
-// 	let path = '../home'
-// 	navigate(path);
-// }
-
 const ViewForm = () => {
 	const navigate = useNavigate();
 			 
 	return (
-		<div>
+		<div style={{ display: 'block',
+		width: 1000, padding: 30, margin: "auto" }}>
 			<h1>Ticket Form</h1>
 			<div className="d-flex justify-content-center">
 			<Button variant="primary" onClick={() => {navigate('../home')}}>Return Home</Button>
 			</div>	
 			
-		<Container>
+		<Container fluid>
 			<Col>
 				<Row>
 					<b><div className="id">Ticket ID Number: </div></b>
