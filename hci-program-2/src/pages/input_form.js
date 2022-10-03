@@ -2,7 +2,6 @@ import  React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { Form } from 'react-bootstrap';
-//import { tickets } from '../data/tickets'
 import tickets from '../data/tickets.json'
 
 export default class InputForm extends Component {
@@ -21,10 +20,7 @@ export default class InputForm extends Component {
 		navigate(path);
 	}
 
-	// handleOnChange = e =>{
-	// 	const {name, value} = e.target
-	// }
-	
+	//function that is called when submit button is pressed
 	onSubmit = () => {
 		//put save state here
 		console.log(new Date().toLocaleString());
@@ -39,6 +35,8 @@ export default class InputForm extends Component {
 		
 	};
 
+	/* This code is used to display the form group on the input form page where the user can type in their information. 
+	There is placeholder text that the user can click on to type in their information*/
 	createFormGroups = () => {
 		return(
 			<div>
@@ -126,10 +124,10 @@ export default class InputForm extends Component {
 				<br />
 
 			</div>
-			/* This code is used to display the form group on the input form page where the user can type in their information. there is placeholder text that the user can click on to type in their information*/
 		)
 	}
 
+	// Calls the function to render the form and a Bootstrap button that submits data in the form boxes
 	render() {
 		return (
 		<div>
@@ -149,5 +147,5 @@ export default class InputForm extends Component {
 		</div>
 		);
 	}
-	// This is the code that is used to submit the users information by clicking a button provided by bootstrap
+	
 };
