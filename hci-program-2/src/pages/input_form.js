@@ -1,12 +1,13 @@
 import  React, { useState } from "react";
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
+
 import tickets from '../data/tickets.json'; // Data file to hold tickets
 
 const InputForm = () => {
 	// useNavigate is used to navigate from on js page to another
 	const navigate = useNavigate();
-	
+
 	// useState returns a pair: the current state value and a function that lets you update it
 	const [name, setName] = useState();
 	const [phone, setPhone] = useState();

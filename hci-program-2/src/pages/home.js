@@ -1,6 +1,7 @@
 import  React from "react";
 import { Table, Button, Container, Row, Col } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
+
 import tickets from '../data/tickets.json'
 
 const Home = () => {

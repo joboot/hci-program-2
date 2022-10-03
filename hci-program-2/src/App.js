@@ -1,11 +1,13 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
+    
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/home';
 import InputForm from './pages/input_form';
 import ViewForm from './pages/view_form';
-import Footer from './components/Footer';
+
 
 /*Questions on Canvas 
 1. Who is our audience? 
@@ -19,24 +21,25 @@ import Footer from './components/Footer';
 */
 
 function App() {
-return (
-    <div>
-        <Router>
-            
-            <Navbar />
+    // Return nvaigation bar that has routes to all pages
+    return (
+        <div>
+            <Router>
+                
+                <Navbar /> {/* FNavbar component */}
 
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/input_form' element={<InputForm/>} />
-                <Route path='/view_form' element={<ViewForm/>} />
-            </Routes>
-        </Router>
-    
-        <Footer /> {/* Footer component */}
-    </div>
-    
-);
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/home' element={<Home />} />
+                    <Route path='/input_form' element={<InputForm/>} />
+                    <Route path='/view_form' element={<ViewForm/>} />
+                </Routes>
+            </Router>
+        
+            <Footer /> {/* Footer component */}
+        </div>
+        
+    );
 }
   
 export default App;
