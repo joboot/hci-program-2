@@ -1,11 +1,12 @@
 import  React, { useState } from "react";
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
-import { Form } from 'react-bootstrap';
-import tickets from '../data/tickets.json'
+import tickets from '../data/tickets.json'; // Data file to hold tickets
 
 const InputForm = () => {
+	// useNavigate is used to navigate from on js page to another
 	const navigate = useNavigate();
+	// useState returns a pair: the current state value and a function that lets you update it
 	const [name, setName] = useState();
 	const [phone, setPhone] = useState();
 	const [type, setType] = useState();
@@ -121,14 +122,13 @@ const InputForm = () => {
 		
 		<Form autoComplete="off" >
 
-			{createFormGroups()};
+			{createFormGroups()}
 			
 		</Form>
-		<div>
-			<Button type="button" className="btn btn-primary" onClick={() => {onSubmit()}}>
-				Submit
-			</Button>
-		</div>
+
+		<Button type="button" className="btn btn-primary" onClick={() => {onSubmit()}}>
+			Submit
+		</Button>
 		
 
 	</div>

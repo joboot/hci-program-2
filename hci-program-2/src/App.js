@@ -22,16 +22,18 @@ function App() {
 return (
     <div>
         <Router>
-        <Navbar />
-        <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='/input_form' element={<InputForm/>} />
-            <Route path='/view_form' element={<ViewForm/>} />
-        </Routes>
+            
+            <Navbar />
+
+            <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route path='/home' element={<Home />} />
+                <Route path='/input_form' element={<InputForm/>} />
+                <Route path='/view_form' element={<ViewForm/>} />
+            </Routes>
         </Router>
-        <div>
-            <Footer />
-        </div>
+    
+        <Footer /> {/* Footer component */}
     </div>
     
 );

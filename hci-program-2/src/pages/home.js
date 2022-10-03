@@ -1,6 +1,5 @@
 import  React from "react";
-import { Table } from "react-bootstrap"
-import { Button } from "react-bootstrap"
+import { Table, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
 import tickets from '../data/tickets.json'
 
