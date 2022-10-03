@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-//import { tickets } from "../data/tickets"
 import tickets from '../data/tickets.json'
 
 const ticket = tickets[0]
@@ -31,9 +30,6 @@ return (
 				<b><div id="form_item" className="type">Type: </div></b>
 				<div>{ticket.type}</div>
 
-				
-			</Row>
-			<Row>
 				<b><div id="form_item" className='name'>Name: </div></b>
 				<div>{ticket.name}</div>
 
@@ -42,10 +38,12 @@ return (
 
 				<b><div id="form_item" className="date">Date Added: </div></b>
 				<div>{ticket.date}</div>
+
 			</Row>
+
 		</Col>
 	</Container>	
-		{/*This code is used to display the information provided in a ticket that has been submitted by a user*/}
+		
 	</div>
 );
 };

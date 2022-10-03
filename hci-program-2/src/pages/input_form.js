@@ -44,10 +44,9 @@ export default class InputForm extends Component {
 			<div>
 				<Form.Group>
 					<Form.Label>
-					{/* <Form.Label id="form_item" class="d-flex justify-content-center" > */}
 						Name:
 					</Form.Label>
-					<Form.Control id="form_item" className="d-flex justify-content-center" 
+					<Form.Control
 						name="name"
 						placeholder="Name"
 						value={this.state.name}
